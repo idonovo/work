@@ -1,0 +1,16 @@
+AgentEventsHandler.o: AgentEventsHandler.cpp AgentEventsHandler.h \
+ ProtectedQueue.h Guard.h Agent.h AgentData.h Logger.h Event.h IHub.h \
+ Hub.h
+AgentFactory.o: AgentFactory.cpp Agent.h AgentData.h Logger.h Guard.h \
+ Event.h IHub.h AgentFactory.h
+Parser.o: Parser.cpp Parser.h AgentData.h Logger.h Guard.h
+SmartHomeLoader.o: SmartHomeLoader.cpp SmartHomeLoader.h Hub.h IHub.h \
+ ProtectedQueue.h Guard.h Parser.h AgentData.h Logger.h AgentFactory.h \
+ Agent.h Event.h LoggerManager.h
+SmartHome.o: SmartHome.cpp SmartHome.h LoggerManager.h Logger.h Guard.h \
+ Hub.h IHub.h ProtectedQueue.h SmartHomeLoader.h
+tests.o: tests.cpp SmartHome.h Logger.h Guard.h
+Logger.o: Logger.cpp Logger.h Guard.h
+LoggerManager.o: LoggerManager.cpp LoggerManager.h Logger.h Guard.h
+Hub.o: Hub.cpp Hub.h IHub.h ProtectedQueue.h Guard.h AgentEventsHandler.h \
+ Agent.h AgentData.h Logger.h Event.h

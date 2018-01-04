@@ -1,0 +1,2 @@
+StringMan.o: StringMan.cpp StringMan.h
+tests.o: tests.cpp mu_test.h myString.h StringMan.h myBuffer.h

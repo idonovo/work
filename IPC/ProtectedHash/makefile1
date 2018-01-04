@@ -1,0 +1,23 @@
+CC = gcc
+CFLAGS = -g -ansi -pedantic -Wall -Wconversion 
+INC_PATH = ../../inc/
+LIB_PATH = ../../libs/
+
+a.out: Double_Iter testHash.c $(LIB_PATH)libhash.a  $(INC_PATH)HashMap.h
+	gcc -g -ansi -pedantic -Wall -Wconversion  testHash.c $(LIB_PATH)libhash.a  $(LIB_PATH)liblist.a
+
+$(LIB_PATH)libhash.a: hashmap.o
+	ar -cvq libhash.a hashmap.o
+	mv libhash.a $(LIB_PATH)
+
+Hash.o: hashmap.c $(INC_PATH)HashMap.h
+	$(CC) $(CFLAGS) hashmap.c -c
+
+Double_Iter: 
+	make -C ../Double_Iter
+
+clean:
+		make -C ../Double_Iter clean
+		-rm hashmap.o $(LIB_FILE)libhash.a a.out
+
+

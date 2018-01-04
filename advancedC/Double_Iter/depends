@@ -1,0 +1,3 @@
+tests.o: tests.c ../../inc/double.h ../../inc/list_itr.h \
+ ../../inc/double.h ../../inc/list_functions.h ../../inc/list_itr.h
+double.o: double.c double.h list_itr.h list_functions.h

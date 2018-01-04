@@ -1,0 +1,13 @@
+
+FLAGS = -ansi -pedantic -Wall -g
+
+a.out:   BinaryTests.c ../../libs/libBST.a
+	gcc  $(FLAGS) BinaryTests.c ../../libs/libBST.a 
+	
+../../libs/libBST.a: Binary.o
+	ar -cvq libBST.a Binary.o
+	mv libBST.a ../../libs/
+	
+double.o: Binary.c ../../inc/bin_tree.h
+	gcc -c -$(FLAGS) *.c
+

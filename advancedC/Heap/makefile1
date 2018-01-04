@@ -1,0 +1,23 @@
+
+FLAGS = -ansi -pedantic -Wall -g
+
+INC_PATH = ../../inc/
+LIB_PATH = ../../libs/
+
+a.out:  vector testsHeap.c  $(LIB_PATH)libheap.a  $(LIB_PATH)libvec.a
+	gcc  $(FLAGS) testsHeap.c $(LIB_PATH)libheap.a  $(LIB_PATH)libvec.a
+	
+$(LIB_PATH)libheap.a:  heap.o
+	ar -cvq libheap.a  heap.o
+	mv libheap.a $(LIB_PATH)
+	
+heap.o:  heap.c $(INC_PATH)Heap.h
+	gcc -c -$(FLAGS) heap.c
+
+vector: 
+	make -C ../Vector
+
+
+clean:
+	rm heap.o $(LIB_PATH)libheap.a a.out
+	make -C ../Vector clean

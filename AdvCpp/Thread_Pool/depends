@@ -1,0 +1,16 @@
+Task.o: Task.cpp Task.h
+ThreadPool.o: ThreadPool.cpp ThreadPool.h TaskCreator.h Task.h \
+ PriorityQueue.h Mutex.h IMutex.h Guard.h CondVar.h TaskHandler.h \
+ Thread.h ExitTask.h CleanUpHandler.h
+Semaphore.o: Semaphore.cpp Semaphore.h ISemaphore.h
+CondVar.o: CondVar.cpp CondVar.h Mutex.h IMutex.h
+Mutex.o: Mutex.cpp Mutex.h IMutex.h
+tests.o: tests.cpp mu_test.h ThreadPool.h TaskCreator.h Task.h \
+ PriorityQueue.h Mutex.h IMutex.h Guard.h CondVar.h TaskHandler.h \
+ Thread.h
+TaskHandler.o: TaskHandler.cpp TaskHandler.h PriorityQueue.h Mutex.h \
+ IMutex.h Guard.h CondVar.h Task.h Thread.h
+Guard.o: Guard.cpp Guard.h Mutex.h IMutex.h
+CleanUpHandler.o: CleanUpHandler.cpp CleanUpHandler.h TaskHandler.h \
+ PriorityQueue.h Mutex.h IMutex.h Guard.h CondVar.h Task.h Thread.h
+SemGuard.o: SemGuard.cpp SemGuard.h ISemaphore.h

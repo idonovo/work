@@ -1,0 +1,5 @@
+Socket_t.o: Socket_t.cpp Socket_t.h fd_t.h
+ServerSocket.o: ServerSocket.cpp ServerSocket.h Socket_t.h fd_t.h \
+ Peer_info.h
+tests.o: tests.cpp ServerSocket.h Socket_t.h fd_t.h Peer_info.h
+fd_t.o: fd_t.cpp fd_t.h

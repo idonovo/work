@@ -1,0 +1,16 @@
+TaskHandler.o: TaskHandler.cpp stdafx.h targetver.h TaskHandler.h \
+ PriorityQueue.h Mutex.h Guard.h CondVar.h Task.h Thread.h
+ThreadPool.o: ThreadPool.cpp stdafx.h targetver.h ThreadPool.h \
+ TaskCreator.h Task.h PriorityQueue.h Mutex.h Guard.h CondVar.h \
+ TaskHandler.h Thread.h ExitTask.h CleanUpHandler.h
+Task.o: Task.cpp stdafx.h targetver.h Task.h
+CondVar.o: CondVar.cpp stdafx.h targetver.h CondVar.h Mutex.h
+stdafx.o: stdafx.cpp stdafx.h targetver.h
+Mutex.o: Mutex.cpp stdafx.h targetver.h Mutex.h
+Guard.o: Guard.cpp stdafx.h targetver.h Guard.h Mutex.h
+CleanUpHandler.o: CleanUpHandler.cpp stdafx.h targetver.h \
+ CleanUpHandler.h TaskHandler.h PriorityQueue.h Mutex.h Guard.h CondVar.h \
+ Task.h Thread.h
+test.o: test.cpp stdafx.h targetver.h mu_test.h ThreadPool.h \
+ TaskCreator.h Task.h PriorityQueue.h Mutex.h Guard.h CondVar.h \
+ TaskHandler.h Thread.h

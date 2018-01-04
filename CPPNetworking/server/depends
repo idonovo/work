@@ -1,0 +1,10 @@
+Server.o: Server.cpp Server.h SocketAcceptor.h Peer_info.h fd_t.h \
+ Socket.h SocketStream.h Selectable.h Application.h NetworkErr.h
+SocketAcceptor.o: SocketAcceptor.cpp SocketAcceptor.h Peer_info.h fd_t.h \
+ Socket.h SocketStream.h Selectable.h NetworkErr.h
+Socket.o: Socket.cpp Socket.h fd_t.h SocketStream.h Peer_info.h \
+ Selectable.h NetworkErr.h
+tests.o: tests.cpp SocketAcceptor.h Peer_info.h fd_t.h Socket.h \
+ SocketStream.h Selectable.h Server.h Application.h
+SocketStream.o: SocketStream.cpp SocketStream.h
+fd_t.o: fd_t.cpp fd_t.h

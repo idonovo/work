@@ -1,0 +1,2 @@
+myString.o: myString.cpp myString.h myBuffer.h
+tests.o: tests.cpp mu_test.h myString.h myBuffer.h

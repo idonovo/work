@@ -1,0 +1,8 @@
+AgentCreator.o: AgentCreator.cpp AgentCreator.h myAgent.h Agent.h \
+ AgentData.h Event.h IHub.h TempSensPayload.h Payload.h Fire.h \
+ TempSensor.h HVAC.h
+HVAC.o: HVAC.cpp HVAC.h Agent.h AgentData.h Event.h IHub.h \
+ TempSensPayload.h Payload.h
+TempSensor.o: TempSensor.cpp TempSensor.h Agent.h AgentData.h Event.h \
+ IHub.h TempSensPayload.h Payload.h
+tests.o: tests.cpp HVAC.h Agent.h AgentData.h Event.h IHub.h

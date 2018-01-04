@@ -1,0 +1,2 @@
+string_t.o: string_t.cpp ../../inc/string_t.h
+main.o: main.cpp ../../inc/string_t.h

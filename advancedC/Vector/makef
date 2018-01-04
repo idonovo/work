@@ -1,0 +1,17 @@
+
+FLAGS = -ansi -pedantic -Wall -g
+
+a.out: tests.c  ../../libs/libvec.a 
+	gcc  $(FLAGS) tests.c ../../libs/libvec.a 
+	
+../../libs/libvec.a: genVec.o
+	ar -cvq libvec.a genVec.o
+	mv libvec.a ../../libs/
+	
+genVec.o: genVec.c ../../inc/genVec.h ../../inc/ADTDefs.h 
+	gcc -c -$(FLAGS) *.c
+	
+clean:
+	rm genVec.o $(LIB_PATH)libvec.a a.out
+	
+

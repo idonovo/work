@@ -1,0 +1,7 @@
+Semaphore.o: Semaphore.cpp Semaphore.h ISemaphore.h
+CondVar.o: CondVar.cpp CondVar.h Mutex.h IMutex.h
+tests.o: tests.cpp Mutex.h IMutex.h CondVar.h Guard.h Thread.h \
+ TrainRunnable.h Runnable.h mu_test.h Semaphore.h ISemaphore.h
+Mutex.o: Mutex.cpp Mutex.h IMutex.h
+Guard.o: Guard.cpp Guard.h Mutex.h IMutex.h
+SemGuard.o: SemGuard.cpp SemGuard.h ISemaphore.h

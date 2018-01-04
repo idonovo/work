@@ -1,0 +1,15 @@
+
+FLAGS = -ansi -pedantic -Wall -g
+
+a.out: tests.c  ../../libs/liblist.a 
+	gcc  $(FLAGS) tests.c ../../libs/liblist.a 
+	
+../../libs/liblist.a: double.o
+	ar -cvq liblist.a double.o
+	mv liblist.a ../../libs/
+	
+double.o: double.c ../../inc/double.h ../../inc/list_itr.h ../../inc/list_functions.h
+	gcc -c -$(FLAGS) *.c
+
+clean:
+	rm double.o ../../libs/liblist.a a.out

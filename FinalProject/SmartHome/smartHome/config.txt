@@ -1,0 +1,17 @@
+[TmpSensor-1-a ]
+type = Sprinkler
+room = room-3-c
+floor = 1
+config = lower: -5 upper: 50 period: 1
+log = fireSensor
+
+[fireSensor-1-a ]
+type = FireDetector
+room = room-1-a
+floor = 1
+config = low: 15 high: 30
+log = fireSensor
+
+
+
+

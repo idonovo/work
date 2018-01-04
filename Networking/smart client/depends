@@ -1,0 +1,4 @@
+smartClient.o: smartClient.c smartClient.h double.h list_itr.h \
+ list_functions.h
+smartClientMain.o: smartClientMain.c smartClient.h
+double.o: double.c double.h list_itr.h list_functions.h

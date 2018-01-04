@@ -1,0 +1,2 @@
+client.o: client.c
+main.o: main.c client.h

@@ -1,0 +1,6 @@
+Tue Dec 26 09:37:05 2017
+ |Desc.:  bad config information on line16
+Tue Dec 26 09:37:05 2017
+ |Desc.:  bad config information on line18
+Tue Dec 26 09:37:05 2017
+ |Desc.: end of file

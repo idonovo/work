@@ -1,0 +1,5 @@
+hashmap.o: hashmap.c ../../inc/HashMap.h ../../inc/double.h \
+ ../../inc/list_itr.h ../../inc/list_functions.h ../../inc/double.h \
+ ../../inc/list_itr.h ../../inc/list_functions.h
+testHash.o: testHash.c ../../inc/HashMap.h ../../inc/double.h \
+ ../../inc/list_itr.h ../../inc/list_functions.h

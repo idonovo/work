@@ -1,0 +1,8 @@
+myGame.o: myGame.cpp myGame.h cardGame.h cardsPlayer.h cards.h deck.h \
+ gamePlayer.h
+deck.o: deck.cpp deck.h cards.h
+cards.o: cards.cpp cards.h
+cardsPlayer.o: cardsPlayer.cpp cardsPlayer.h cards.h deck.h
+gameplayer.o: gameplayer.cpp gamePlayer.h cardsPlayer.h cards.h deck.h
+main.o: main.cpp myGame.h cardGame.h cardsPlayer.h cards.h deck.h \
+ gamePlayer.h
